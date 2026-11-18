@@ -1,0 +1,1144 @@
+﻿<!DOCTYPE html>
+<html lang="it-it" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<base href="https://www.sanita.start.toscana.it/portalegare/index.php/bandi" />
+	<meta name="author" content="Super User" />
+	<title>Bandi Di Gara</title>
+	<link href="/portalegare/templates/aflinktemplate3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/portalegare/media/system/css/modal.css?96149b1bc6be192898ce884e8b3f8508" rel="stylesheet" />
+	<link href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style.css?Wednesday 18th of November 2026 01:14:31 PM" rel="stylesheet" media="screen,projection" />
+	<link href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style_print.css?Wednesday 18th of November 2026 01:14:31 PM" rel="stylesheet" media="print" />
+	<link href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style_chromefix.css" rel="stylesheet" media="screen,projection" />
+	<link href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style_base.css?Wednesday 18th of November 2026 01:14:31 PM" rel="stylesheet" media="screen,projection" />
+	<link href="/portalegare/templates/aflinktemplate3/css/layout.css?96149b1bc6be192898ce884e8b3f8508" rel="stylesheet" />
+	<link href="/portalegare/templates/aflinktemplate3/css/template.css?96149b1bc6be192898ce884e8b3f8508" rel="stylesheet" />
+	<link href="/portalegare/templates/aflinktemplate3/css/general.css?96149b1bc6be192898ce884e8b3f8508" rel="stylesheet" />
+	<link href="/portalegare/templates/aflinktemplate3/css/personal.css?96149b1bc6be192898ce884e8b3f8508" rel="stylesheet" />
+	<style>
+
+	body.site {
+		/* border-top: 3px solid #0088cc*/;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"6876342cfe745b28b7f50b639eb8dd1a","system.paths":{"root":"\/portalegare","base":"\/portalegare"},"system.keepalive":{"interval":840000,"uri":"\/portalegare\/index.php\/component\/ajax\/?format=json"}}</script>
+	<script src="/portalegare/media/system/js/core.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<!--[if lt IE 9]><script src="/portalegare/media/system/js/polyfill.event.js?96149b1bc6be192898ce884e8b3f8508"></script><![endif]-->
+	<script src="/portalegare/media/system/js/keepalive.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/system/js/mootools-core.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/system/js/mootools-more.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/system/js/modal.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/jui/js/jquery.min.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/jui/js/jquery-noconflict.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/jui/js/jquery-migrate.min.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/system/js/caption.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/media/jui/js/bootstrap.min.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script src="/portalegare/templates/aflinktemplate3/js/template.js?96149b1bc6be192898ce884e8b3f8508"></script>
+	<script>
+
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			initSqueezeBox();
+			$(document).on('subform-row-add', initSqueezeBox);
+
+			function initSqueezeBox(event, container)
+			{
+				SqueezeBox.assign($(container || document).find('a.modal').get(), {
+					parse: 'rel'
+				});
+			}
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<!-- INIZIO D.P.C.M. Meta Tags -->
+	<LINK rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<LINK rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+	<META NAME="DC.Description" CONTENT="Bandi di gara">
+	<link rel="alternate" type="application/rss+xml" title="Feed bandi" href="/portale/rss_bandi.asp?FilterHide=bScaduto=0+and+tipo%3C%3E%27Esito%27+&numRowForPag=20&nPag=1" />
+	<!-- FINE D.P.C.M. Meta Tags -->
+
+	<link rel="stylesheet" href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style.css" type="text/css" media="screen,projection"  />
+	<link rel="stylesheet" href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style_print.css" type="text/css" media="print"  />
+	<link rel="stylesheet" href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/aflink_style_chromefix.css" type="text/css" media="screen,projection"  />
+	<link rel="stylesheet" href="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/css/last_style.css" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat%3A400italic%2C400%2C500%2C600%2C700%2C300&amp;subset=latin%2Clatin-ext&amp;ver=5.2.3" type="text/css" media="all" rel="stylesheet" id="font_type_1-css">
+	<script type="text/javascript" src="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/js/md_stylechanger.js"></script>
+	<script type="text/javascript" src="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/js/FldHierarchy.js?ver=2"></script>
+	<script type="text/javascript" src="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/js/SearchDocumentForExtendeAttrib.js?ver=2"></script>
+	<script type="text/javascript" src="https://www.sanita.start.toscana.it/portalegare/templates/aflinktemplate3/js/getObj.js?ver=2"></script>
+	
+	<!--[if lt IE 9]><script src="/portalegare/media/jui/js/html5.js"></script><![endif]-->
+</head>
+
+<body class="site com_content view-article no-layout no-task itemid-294">
+
+	<!-- link accessibilità -->
+	<ul class="skiplinks">
+			<li><a href="#main" class="u2">Vai ai contenuti</a></li>
+			<li><a href="#nav" class="u2">Vai al menu</a></li>
+	</ul>
+
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<div id="header">
+            	<header class="header" role="banner">
+					<a class="brand pull-left stemma" href="https://www.estar.toscana.it/" target="_blank">
+						<img src="/portalegare/images/i_logo_new.png" alt="Logo">
+					</a>                	
+				</header>
+			</div>
+        
+            <div class="HeaderTools">
+           			<!--div class="HeaderMenu">
+                    								<nav class="navigation" role="navigation">
+                                <div class="navbar pull-left">
+                                    <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </a>
+                                </div>
+					<div class="nav-collapse">
+						<ul class="nav menu nav-pills mod-list">
+<li class="item-464"><a href="/portalegare/index.php" >Home</a></li><li class="item-473"><a href="/portalegare/index.php/registrazione" >Registrazione Operatori Economici</a></li><li class="item-474"><a href="/portalegare/index.php/registrazione-ente" >Registrazione Utenti degli Enti</a></li><li class="item-478"><a href="/portalegare/index.php/contatti" >Contatti</a></li></ul>
+
+					</div>
+				</nav>
+			                    </div-->
+                    <div class="header-search pull-right" id="links_top_access">
+                        
+                    </div>
+
+           </div>
+          
+          
+
+          <div id="sater_TopTitle" class="TopTitle">
+				<h1>Portale acquisti</h1>
+         </div>
+          
+          
+          
+          
+          <div id="breadcrumbs">
+          <table>
+            <tr>
+            <td class="ERLinkTD">
+              	<ul class="breadcrumb">
+                  <li><a href="#">Portale acquisti</a> |</li>
+				  
+              </ul>
+             </td>
+              <td>		<div class="moduletable">
+						<div aria-label="Breadcrumbs" role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+					<li>
+				Sei qui: &#160;
+			</li>
+		
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/portalegare/index.php" class="pathway"><span itemprop="name">Home</span></a>
+					
+											<span class="divider">
+							<img src="/portalegare/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="1">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/portalegare/index.php/bandi" class="pathway"><span itemprop="name">Bandi Di Gara</span></a>
+					
+											<span class="divider">
+							<img src="/portalegare/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="2">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<span itemprop="name">
+						Dettaglio					</span>
+					<meta itemprop="position" content="3">
+				</li>
+				</ul>
+</div>
+		</div>
+	</td>
+            </tr>
+          </table>
+        </div>
+			
+          
+			<div class="row-fluid" id ="nav">
+									<!-- Begin Sidebar -->
+					<div id="sidebar" class="span3">
+						<div class="sidebar-nav">
+									<div class="moduletable_menu">
+							<h3>Area Pubblica</h3>
+						<ul class="nav menu mod-list">
+<li class="item-435 default"><a href="/portalegare/index.php" >Home</a></li><li class="item-294 current active"><a href="/portalegare/index.php/bandi" >Bandi Di Gara</a></li><li class="item-489"><a href="/portalegare/index.php/consultazioni-preliminari-di-mercato" >Consultazioni Preliminari di Mercato</a></li><li class="item-475"><a href="/portalegare/index.php/sda" >Sistema dinamico di Acquisizione</a></li><li class="item-483"><a href="/portalegare/index.php/feed-rss" >Feed rss</a></li></ul>
+		</div>
+			<div class="moduletable">
+							<h3>Area Privata</h3>
+						
+
+	<script type="text/javascript">
+		function vacio(q) {   
+        for ( i = 0; i < q.length; i++ ) {   
+                if ( q.charAt(i) != " " ) {   
+                        return true   
+                }   
+        }   
+        return false   
+		}   
+		
+		function evidenziaCampo(obj)
+		{
+			obj.setAttribute("class","txt required fieldError");
+		}
+		
+
+		function resetCampo(obj)
+		{
+			obj.style.background="";
+			obj.setAttribute("class","txt required");
+		}
+		
+		// Tutto il campi completi.   
+   
+	   function valida(form) 
+	   {   
+			var totCampiOk = 0;
+			
+			try
+			{
+				document.getElementById('msg-errore-login').style.display = 'none';
+			}
+			catch(e)
+			{
+			}
+			
+			if( vacio(document.getElementById('login_idazienda').value) == false) 
+			{   
+				evidenziaCampo(document.getElementById('login_idazienda'));
+			} 
+			else
+			{
+				totCampiOk++;
+				resetCampo(document.getElementById('login_idazienda'));
+			}
+
+			if( vacio(document.getElementById('login_username').value) == false) 
+			{   
+				evidenziaCampo(document.getElementById('login_username'));
+			} 
+			else
+			{   
+				resetCampo(document.getElementById('login_username'));
+				totCampiOk++;
+			}  	
+
+			if( vacio(document.getElementById('login_password').value) == false) 
+			{   
+				evidenziaCampo(document.getElementById('login_password'));
+			} 
+			else
+			{   
+				resetCampo(document.getElementById('login_password'));
+				totCampiOk++;
+			}  	
+			
+		    if (totCampiOk == 3)
+			{
+				return true;
+			}
+			else
+			{
+				document.getElementById('messaggio_errore').innerHTML = "<b>Attenzione</b>: I campi evidenziati non sono stati compilati correttamente!";
+				return false;  
+			}   	
+		}
+		
+		function TomaCampo(obj)
+		{
+			document.write (totCampiOK);
+		}
+		
+							
+	</script>  
+	<script type="text/javascript" src="/portalegare/public/js/spid_button.js"></script>
+	<form name="form" action="/application/login.asp?redirectback=yes&amp;chiamante=/portalegare/index.php" method="post" id="login" autocomplete="off" onSubmit="return valida(this);" >
+		
+		
+		<div>
+		
+			<span id="messaggio_errore"></span>
+		
+		
+		</div>
+
+		<div>
+
+			<label for="login_idazienda">Codice di accesso</label>
+			<input type="text" name="IDAZIENDA" class="txt required" id="login_idazienda" style="" autocomplete="off" />
+			<label for="login_username">Nome Utente</label>
+			<input type="text" name="USERNAME" class="txt required" id="login_username" style="" autocomplete="off" />
+			<label for="login_password">Password</label>
+			<input type="password" name="PASSWORD" class="txt required" id="login_password" style="" autocomplete="off" />
+			<input type="submit" value="Accedi" class="button" id="submit1" name="submit1"/>
+
+			<input type="hidden" name="strMnemonicoMP" value="PA"/>
+			<input type="hidden" value="1" name="strCheckIscrizione"/>
+			<input type="hidden" id="URL_APP" name="URL_APP" value="/application/"/>
+			<input type="hidden" name="SYS_INSERISCIQUESITIDALPORTALE" id="SYS_INSERISCIQUESITIDALPORTALE" value="" />
+
+		</div>
+
+	</form>	
+	<ul class="">
+		<li>	
+			<div id="spid-button">
+				<a href="/Application/OpenID/Login.aspx" id="linkSpid" class="italia-it-button italia-it-button-size-m button-spid" style="display:flex !important; align-items:center !important; width: 100%;">
+
+					<span class="italia-it-button-icon" style="
+							display:inline-flex !important;
+							width:auto !important;
+							border:none !important;
+							margin-right:12px !important;
+						  ">
+					  <img src="/portalegare/public/img/spid/spid-ico-circle-bb.svg" onerror="this.src='public/img/spid/spid-ico-circle-bb.png'; this.onerror=null;" alt="">
+					</span>
+
+
+					<span class="italia-it-button-text" style="
+							display:flex !important;
+							align-items:center !important;
+							justify-content:center !important;
+							white-space:normal !important;
+							line-height:1.2 !important;
+							text-align:center !important;
+							height:100%;
+						  ">
+					  Entra con SPID, CIE, CNS o eIDAS
+					</span>
+
+				</a>
+			</div>
+		</li>
+	</ul>
+	<br/>
+	<div class="moduletable_menu">
+		<ul class="nav menu">
+		
+			<li>
+				<a class="modal"  rel="{handler: 'iframe', size: {x: 600, y: 600}}"  href="/application/modal/recuperopwd_joomla.asp"  title="Hai dimenticato la password?">
+					Hai dimenticato la password?				</a>
+			</li>
+		
+						
+			<li>
+			
+				<a class="modal"  rel="{handler: 'iframe', size: {x: 600, y: 600}}" href="/application/modal/recuperouser_joomla.asp" title="Hai dimenticato Codice di Accesso e Nome Utente ?">
+					Hai dimenticato Codice di Accesso e Nome Utente ?				</a>
+			</li>
+			
+			
+			<li>
+				<a href="/portalegare/index.php/registrazione" title="<h2>Registrazione Operatori Economici</h2>">
+				<h2>Registrazione Operatori Economici</h2></a>
+			</li>
+		
+			<li style="display:none;">
+				<a id="modalerequisiti" href="//portalegare/requisitiminimi.asp" rel="modal[620|350| ]" title="IE6 non supportato">
+					IE6 non supportato				</a>
+			</li>
+			
+			
+			<li><a href="/portalegare/./index.php/registrazione-ente"><h2>Registrazione Utente P.A.</h2></a></li></li><li><a href="/application/portale/attestazione_doc"><h2>Attestazione Documenti</h2></a></li>			
+			
+		</ul>
+	</div>
+
+		</div>
+	
+						</div>
+					</div>
+					<!-- End Sidebar -->
+								
+			<div id="main">
+				<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="it-IT" />
+	
+		
+						
+		
+	
+	
+		
+								<div itemprop="articleBody">
+		<h1 id="titolo_pagina" style="text-align: center;"><span style="font-family: arial black,avant garde;"><strong><span style="font-size: x-large;">Bandi</span></strong></span></h1>
+<div id="div_rss_lista" style="font-size: 12.16px; line-height: 15.808px;">		<div class="moduletable">
+						<script src="/portalegare/modules/mod_rss_aflink/aflink_js_util.js?Wednesday 18th of November 2026 01:14:31 PM" type="text/javascript"></script><script src="/portalegare/modules/mod_rss_aflink/aflink_js_lista.js?Wednesday 18th of November 2026 01:14:31 PM" type="text/javascript"></script>			
+				<input type="hidden" id="text_dettaglio" value="SI"/>
+			
+				<h3 class="aflink_link_suggerimenti" >
+					<a href="#" id="hide_show_suggerimenti">
+						Nascondi suggerimenti
+						
+					</a>
+				</h3>
+
+				<div class="aflink_div_suggerimenti" id="vertical_slide">
+					
+Per salvare o leggere il contenuto degli allegati &egrave; sufficiente cliccare sul link. <br/>
+Per la stampa della pagina cliccare sull'icona della stampante. <br/>
+Per partecipare al bando, quando la modalità di partecipazione &egrave; telematica, <br/>
+clicca sul pulsante Partecipa e segui le istruzioni contenute nel disciplinare di gara. <br/>
+Per partecipare al bando o richiedere chiarimenti &egrave; necessaria la registrazione al Portale. <br/>
+Se non sei registrato clicca su <a href='./registrazione' title='registrati ora'>Registrati ora!</a>
+				</div>
+				
+			  <a onclick="javascript:window.print();" style="cursor:pointer" class="stampa_dettaglio" title="Stampa">
+				<img src="/portalegare/images/printer.gif" />
+			  </a>
+			  
+			  <a id="icona_download_allegati" onclick="document.getElementById('DownloadAllegati').onclick();" style="cursor:pointer;display:none" class="stampa_dettaglio" title="Download allegati"><img src="/portalegare/images/download.jpg" /></a>				
+	<div id="accordion">
+				
+		<input type="hidden" id="text_dominio" value="toscana.it"/><input type="hidden" id="text_tipo_bando" value="Bando"/><h2 xmlns="http://www.w3.org/1999/xhtml">Dettaglio</h2>
+<div xmlns="http://www.w3.org/1999/xhtml" class="content">
+	<div style="display:none;">
+		<a id="modale" href="https://www.sanita.start.toscana.it/portalegare/modal/partecipa_joomla.asp?STRURLPARTECIPA=..%2F..%2F..%2F..%2FCtl_Library%2FDOCUMENT%2FPartecipa.asp%3FTIPODOC=DOMANDA_PARTECIPAZIONE%26IdMsgPar%3D###ID-MSG###" class="modal" title="Partecipa" rel="">
+            Iscriviti
+          </a>
+	</div>
+	<table id="template_doc">
+		<thead>
+			<tr>
+				<th colspan="4" align="left">
+					<h1>Invito (
+                PI125721-26 )
+              </h1>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Descrizione breve</th>
+				<td>ESTARSDAFA03PR25 FORNITURA DI FARMACI URGENTI</td>
+			</tr>
+			<tr>
+				<th>Id Appalto ANAC</th>
+				<td>c4867f98-4c15-4808-8f54-8ce221ad1a50</td>
+			</tr>
+			<tr>
+				<th>
+                Informazioni Tecniche
+              </th>
+				<td>
+					<table>
+						<tr>
+							<td class="CellIntestGrid" align="center" width="25%">
+                      Numero Lotto
+                    </td>
+							<td class="CellIntestGrid" align="center" width="25%">
+                      CIG
+                    </td>
+							<td class="CellIntestGrid" align="center" width="25%">
+                      Descrizione Lotto
+                    </td>
+							<td class="CellIntestGrid" align="center" width="25%">
+                      Link
+                    </td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>BD9E361B26</td>
+							<td>Fornitura, in casi di urgenza, di specialità medicinali per Area Vasta Nord Ovest: -  AUSL Toscana Nord Ovest -  AOU Pisana</td>
+							<td style="word-break: break-word;">https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BD9E361B26</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>BD9E362BF9</td>
+							<td>Fornitura, in casi di urgenza, di specialità medicinali per Area Vasta Centro: - AUSL Toscana Centro - per AOU Careggi - AOU Meyer</td>
+							<td style="word-break: break-word;">https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BD9E362BF9</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>BD9E363CCC</td>
+							<td>Fornitura, in casi di urgenza, di specialità medicinali per Area Vasta Sud Est  - AUSL Toscana Sud Est - AOU Siena</td>
+							<td style="word-break: break-word;">https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BD9E363CCC</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th>Incaricato</th>
+				<td>Novelli Diana</td>
+			</tr>
+			<tr>
+				<th>Importo Appalto</th>
+				<td>1.452.000,00
+                  (Iva Esclusa)
+                </td>
+			</tr>
+			<tr>
+				<th>Criterio Aggiudicazione</th>
+				<td>Prezzo più basso</td>
+			</tr>
+			<tr>
+				<th>Tipo Appalto</th>
+				<td>Forniture</td>
+			</tr>
+			<tr>
+				<th>Termine Richiesta Quesiti</th>
+				<td>09/11/2026
+
+                    &nbsp; ore &nbsp;
+
+                    12:00:00
+
+                    [Ora Italiana]
+                  </td>
+			</tr>
+			<tr>
+				<th>
+                        Presentare le offerte entro il
+                      </th>
+				<td>19/11/2026
+
+                    &nbsp; ore &nbsp;
+
+                    12:00:00
+
+                    [Ora Italiana]
+                  </td>
+			</tr>
+			<tr>
+				<th>
+                        Data I Seduta
+                      </th>
+				<td>19/11/2026
+
+                        &nbsp; ore &nbsp;
+
+                        12:15:00
+
+                        [Ora Italiana]
+
+                      </td>
+			</tr>
+			<tr>
+				<th>
+                Enti Proponenti
+              </th>
+				<td>
+					<table>
+						<tr>
+							<td class="CellGridPrintProducts">Regione Toscana </td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th>
+              Documentazione
+            </th>
+				<td>
+					<table>
+						<tr>
+							<td class="CellIntestGrid" align="center" width="50%">
+                        Descrizione
+                      </td>
+							<td class="CellIntestGrid" align="center" width="50%">
+                        Allegato
+                      </td>
+							<td class="CellIntestGrid" align="center" width="30%">
+                          Data Pubblicazione
+                        </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Determina Indizione</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="Determinazione_0001310_2026.pdf*pdf*365649*a02cffe932234f4da_20261030073348600*SHA256*FFF6017698F2630D3830DFE9CBD509676613DBC529D704C2D7ACABBCF128215F*2026-10-30T08:33:49"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('Determinazione_0001310_2026.pdf*pdf*365649*a02cffe932234f4da_20261030073348600*SHA256*FFF6017698F2630D3830DFE9CBD509676613DBC529D704C2D7ACABBCF128215F*2026-10-30T08:33:49') + '&amp;FORMAT=I%2CN');" title="">Determinazione_0001310_2026.pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Lettera d'invito</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="All. B LETTERA DI INVITO ESTARSDAFA03PR25 (2).pdf*pdf*534660*bfe69fa22cc24ef59_20261030073417657*SHA256*D1941CEC33A3D8D3FC35A17ABBE6EBCF9BDF8F5B2703E36A49129ABF297BDBF7*2026-10-30T08:34:18"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('All. B LETTERA DI INVITO ESTARSDAFA03PR25 (2).pdf*pdf*534660*bfe69fa22cc24ef59_20261030073417657*SHA256*D1941CEC33A3D8D3FC35A17ABBE6EBCF9BDF8F5B2703E36A49129ABF297BDBF7*2026-10-30T08:34:18') + '&amp;FORMAT=I%2CN');" title="">All. B LETTERA DI INVITO ESTARSDAFA03PR25 (2).pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Elenco lotti</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="All. C Elenco lotti (1).pdf*pdf*492319*a64203f3fc834116b_20261030073427237*SHA256*A750AF7CE2FC3A90A9EBC38A55595C639BF5A30043BC1D1EB9A467FBAC4E5D3E*2026-10-30T08:34:27"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('All. C Elenco lotti (1).pdf*pdf*492319*a64203f3fc834116b_20261030073427237*SHA256*A750AF7CE2FC3A90A9EBC38A55595C639BF5A30043BC1D1EB9A467FBAC4E5D3E*2026-10-30T08:34:27') + '&amp;FORMAT=I%2CN');" title="">All. C Elenco lotti (1).pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>capitolato tecnico</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="ALL. D CAPITOLATO TECNICO (1).pdf*pdf*460714*ffd68015adba42f18_20261030073450180*SHA256*7ED94D310E85836E8A547547D3D7241B2732A9240CB386A427C72AD1F79800B8*2026-10-30T08:34:50"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('ALL. D CAPITOLATO TECNICO (1).pdf*pdf*460714*ffd68015adba42f18_20261030073450180*SHA256*7ED94D310E85836E8A547547D3D7241B2732A9240CB386A427C72AD1F79800B8*2026-10-30T08:34:50') + '&amp;FORMAT=I%2CN');" title="">ALL. D CAPITOLATO TECNICO (1).pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Elenco punti di consegna</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="All. E ELENCO PUNTI DI CONSEGNA (1).pdf*pdf*121965*b7430b92f9e44a4bb_20261030073501260*SHA256*F95F54BFED301017C176314A19991A175E848DF32C73BA10057EA96A59C66FF4*2026-10-30T08:35:01"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('All. E ELENCO PUNTI DI CONSEGNA (1).pdf*pdf*121965*b7430b92f9e44a4bb_20261030073501260*SHA256*F95F54BFED301017C176314A19991A175E848DF32C73BA10057EA96A59C66FF4*2026-10-30T08:35:01') + '&amp;FORMAT=I%2CN');" title="">All. E ELENCO PUNTI DI CONSEGNA (1).pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Dichiarazione percentuale di sconto</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="All. F dichiarazione sconto (1).pdf*pdf*350349*r6d17366901846b1a_20261030073513569*SHA256*EFC3597E65650252E5DED249C070C1BEF51DA34631B614EED5D6F6DB4E510420*2026-10-30T08:35:14"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('All. F dichiarazione sconto (1).pdf*pdf*350349*r6d17366901846b1a_20261030073513569*SHA256*EFC3597E65650252E5DED249C070C1BEF51DA34631B614EED5D6F6DB4E510420*2026-10-30T08:35:14') + '&amp;FORMAT=I%2CN');" title="">All. F dichiarazione sconto (1).pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td>
+								<label>Capitolato normativo SDA</label>
+							</td>
+							<td class="linkAttachment">
+								<input type="hidden" name="Allegato" id="Allegato" value="capitolato NORMATIVO E PRESTAZIONALE SDA FARMACI.pdf*pdf*978951*r98ca59ef05042d3a_20260519104045864*SHA256*6BD5DA2FF7BBFDDF2ACE76709DA16854BB6F38CE78EBB1209E8A6FDC5D022420*2026-05-19T12:40:46"></input>
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('capitolato NORMATIVO E PRESTAZIONALE SDA FARMACI.pdf*pdf*978951*r98ca59ef05042d3a_20260519104045864*SHA256*6BD5DA2FF7BBFDDF2ACE76709DA16854BB6F38CE78EBB1209E8A6FDC5D022420*2026-05-19T12:40:46') + '&amp;FORMAT=I%2CN');" title="">capitolato NORMATIVO E PRESTAZIONALE SDA FARMACI.pdf</label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                  &nbsp;
+
+                                  15:23
+                                   [Ora Italiana]
+                                </td>
+						</tr>
+						<tr>
+							<td class="CellGridPrintProducts">
+								<label>Foglio prodotti selezionato</label>
+							</td>
+							<td class="linkAttachment">
+								<div id="DIV_Allegato">
+									<label name="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/Report/CSV_LOTTI.asp?HIDECOL=EsitoRiga&amp;IDDOC=' + getQSParam('bando') + '&amp;TIPODOC=BANDO_GARA&amp;MODEL=MODELLI_LOTTI_ServicedilaboratorioDEF_1_613416_MOD_OffertaINPUT');" title="">
+                                File XLSX da compilare
+                              </label>
+								</div>
+							</td>
+							<td class="CellGridPrintProducts">02/11/2026
+                        
+                                &nbsp;
+                        
+                                15:23
+                                 [Ora Italiana]
+                              </td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th>Note</th>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<div style="padding-bottom:80px"></div>
+</div>
+<h2 xmlns="http://www.w3.org/1999/xhtml">Avvisi</h2>
+<div xmlns="http://www.w3.org/1999/xhtml" class="content">
+	<table id="template_doc">
+		<tr class="">
+			<td class="CellIntestGrid">
+				<font class="PrintCols">Data Pubblicazione</font>
+			</td>
+			<td class="CellIntestGrid">
+				<font class="PrintCols">Descrizione</font>
+			</td>
+			<td class="CellIntestGrid">
+				<font class="PrintCols">Allegato</font>
+			</td>
+		</tr>
+		<tr>
+			<td class="CellGridPrintProducts">02/11/2026
+
+                &nbsp; ore &nbsp;
+
+                15:24
+
+                [Ora Italiana]
+
+              </td>
+			<td class="CellGridPrintProducts">Si comunica che la gara è rivolta ai grossisti di specialità medicinali e prodotti sanitari richiesti in caso di urgenza e  non disponibili nei magazzini ESTAR. Non è presente un elenco prodotti.</td>
+			<td class="linkAttachment">
+				<input type="hidden" name="Allegato" id="Allegato" value=""></input>
+				<div id="DIV_Allegato">
+					<label name="Allegato_V_N" id="Allegato_V_N" class="Attach_label" onclick="window.open('https://www.sanita.start.toscana.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&amp;FIELD=Allegato&amp;PATH=%2E%2E%2F&amp;TECHVALUE=' + escape('') + '&amp;FORMAT=I%2CN');" title=""></label>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>		
+		<h2>Chiarimenti </h2>
+		<div class="content">
+		<div id="CHIARIMENTI" class="div_chiarimenti">
+			
+		<script src="/portalegare/modules/mod_rss_aflink/ajaxsbmt.js" type="text/javascript"></script>
+		
+		
+		<table id="template_doc" >
+			
+			<!--
+			<thead>
+				<tr>
+					<th colspan="4" align=left nowrap >Chiarimenti</th>
+				</tr>
+			</thead>
+			-->
+			
+			<tbody>
+			
+			<!--area per inserire un quesito se il bando ancora incorso-->
+						
+			<!--l'area di ricerca e la lista dei quesiti deve essere inserita in funzione di un attributo del documento-->
+			<!--area per cercare un quesito -->
+			<tr id="arearicercaquesiti">
+			<th colspan="1" align=left nowrap>
+			
+				Chiarimenti Pubblicati			
+			</th>
+			
+			<th colspan="1" nowrap align="right">	
+			
+				<label for="FiltroQuesito">Cerca nei quesiti</label>
+
+			<!-- <form name="FormCercaQuesito" id="FormCercaQuesito" action="" method="get" onsubmit="javascript:CercaQuesito();return false;"> -->
+				<input class="txt" type="text" id="FiltroQuesito" name="FiltroQuesito" value="" onkeydown="if (event.keyCode == 13) CercaQuesito();">
+				<img  src="/portalegare/images/lente.png" style="cursor:pointer;" alt="Cerca protocollo o quesito" onclick="javascript:CercaQuesito();"/>
+			<!-- </form> -->
+			</th>
+			</tr>
+		
+			<tr>
+			
+				<td colspan="4">
+				
+					<div id="esitoquesito" style="display:none;">
+					</div>
+					
+					<!--area lista dei quesiti -->
+					<div id="grigliaquesiti"  name="grigliaquesiti">
+					</div>
+				</td>
+			 
+			</tr>
+		
+					
+			</tbody>
+		</table>
+
+		<script type="text/javascript">
+		
+		function getObj(strId) 
+		{
+			
+			if (document.all != null)
+			{
+				return document.all(strId);
+			}
+			else
+			{
+				return document.getElementById(strId);
+			}
+		}
+		
+		function HideFormInvioQuesito()
+		{
+		  
+			if ( document.getElementById('campi_invio_quesito').style.display  == 'none' ) 
+			{
+				document.getElementById('campi_invio_quesito').style.display='';
+				//document.getElementById('esitoquesito').style.display='none';
+			}
+			else
+			{
+				document.getElementById('campi_invio_quesito').style.display='none';
+			}
+		
+			try
+			{    
+				document.getElementById('errormsg').style.display='none';
+			}
+			catch(e)
+			{
+			
+			}
+		  
+		}
+		
+		window.addEvent('domready', function(){
+			
+			var RichiestaQuesito='YES';
+			
+			Locale.use("it-IT");
+			
+			/* Nascondo l'area quesiti se richiesto dal template */
+			try
+			{
+				try 
+				{
+					CodificaRichiestaQuesito =  getObj('RichiestaQuesito').value;
+					
+					//1=SI,2=NO,3=solo per invitati
+					if (CodificaRichiestaQuesito == '2' || CodificaRichiestaQuesito == '3' )
+						RichiestaQuesito='NO';
+
+					//se stiamo su un messaggio invito e RichiestaQuesito= solo per invitati allora visualizzo solo dall'interno i quesiti sugli inviti
+					if (CodificaRichiestaQuesito == '3' && Number(MessaggioPrivato) > 0 )
+						RichiestaQuesito='YES'; 
+					  
+				}catch(e)
+				{
+					try
+					{
+						console.log("info. err: " + e.message);
+					}
+					catch(e){}
+				}	
+				
+				if ( RichiestaQuesito != 'YES') 
+				{
+					document.getElementById('blocco_div_quesiti').style.display='none';
+				}
+				
+				
+			}
+			catch(e)
+			{
+				try
+				{
+					console.log("info. err: " + e.message);
+				}
+				catch(e){}
+			}
+			
+			try
+			{
+				var myForm = document.id('FormInsQuesito');
+				var myFormValidator = new Form.Validator(myForm , {
+						onFormValidate: myFormHandler,
+						useTitles: false
+					});
+			}
+			catch(e) {}
+
+			/* Controllo se mostrare i nuovi quesiti o i vecchi(tramite documento generico)
+				il controllo avviene verificando la presenza del campo hidden PARAM, che viene inserito
+				nei template che necessitano dei vecchi quesiti */
+			
+			var checkQuesiti = '';
+			
+			try
+			{
+				checkQuesiti = getObj('PARAM').value;
+			}
+			catch(e)
+			{
+				checkQuesiti = '';
+			}
+			
+			if (checkQuesiti == '')
+			{
+				CercaQuesito();
+			}
+			else
+			{
+				try
+				{
+					document.getElementById("FiltroQuesito").disabled=true;
+				}catch(e){}
+				
+				xmlhttpPost('/application/report/grigliaquesitiGD.asp?backoffice=yes&PARAM=' + checkQuesiti, '', 'grigliaquesiti', '<img src=\'/portalegare/images/ajax-loading.gif\'>');
+			}
+			
+		});
+		
+			function myFormHandler(isValid, element, event)
+			{
+				if ( isValid ) 
+				{
+					xmlhttpPost('/portalegare/modules/mod_rss_aflink/mod_rss_aflink.php?inserisciquesito=yes', 'FormInsQuesito', 'esitoquesito', '<img src=\'/portalegare/images/ajax-loading.gif\'>'); 
+					
+					RefreshImageCatcha('imgCaptcha');
+					
+					HideFormInvioQuesito();
+					
+					getObj('grigliaquesiti').innerHTML='';
+					
+					CercaQuesito();
+					return false;
+				}
+				else
+				{
+					//alert('validazione not ok');
+				}
+
+				return false;
+				
+			}
+
+			function CercaQuesito() 
+			{
+				var ricerca = "";
+				
+				try
+				{
+					ricerca = getObj('FiltroQuesito').value;
+				}
+				catch(e)
+				{
+					ricerca = "";
+				}
+				
+				//if ( ricerca != '')
+				//{
+					var feed_quesiti = getObj('rss_quesiti').value + '&FilterHide=';
+
+					ricerca = ricerca.replace(" ","%");
+					ricerca = ricerca.replace("'","''");
+
+					feed_quesiti = feed_quesiti +  encodeURIComponent(" ChiarimentoPubblico=1 and (protocol like '%" + ricerca + "%' or domanda like '%" + ricerca + "%')"); 
+					
+					xmlhttpPost('/portalegare/modules/mod_rss_aflink/mod_rss_aflink.php?grigliaQuesiti=yes&feed_quesiti=' + encodeURIComponent(feed_quesiti), '', 'grigliaquesiti', '<img src=\'/portalegare/images/ajax-loading.gif\'>');
+				//}
+				
+			}
+			
+			function RefreshImageCatcha(valImageId) 
+			{
+				var objImage = document.images[valImageId];
+				if (objImage == undefined) {
+					return;
+				}
+				var now = new Date();
+				//objImage.src = objImage.src.split('?')[0] + '?_RELOAD&x=' + now.toUTCString() + objImage.src.split('?')[1];
+				
+				objImage.src = objImage.src + '&_RELOAD';
+				
+			}
+				
+		
+		</script>
+		
+		</div></div>		
+	<h2>Tabella informativa di indicizzazione</h2>
+	<div class="content">
+		
+		<!--
+		<div id="area_dpcm" class="div_area_dpcm">
+		
+			<ul>
+				<li>
+					<a href="#" onclick="document.getElementById('table_dpcm').style.display='block';return false;">Visualizza tabella DPCM</a>
+				</li>
+				<li>
+					<a href="#" onclick="document.getElementById('table_dpcm').style.display='none';return false;">Nascondi tabella DPCM</a>
+				</li>
+			</ul>
+		</div>
+		-->
+		
+		<div class="table_dpcm" id="table_dpcm" style="overflow:auto; display:block">
+
+			<table summary="Tabella informativa d'indicizzazione per: bandi, esiti ed avvisi" class="list infoIndicizzazione tabella">
+				
+				<tbody>
+					<tr>
+						<th colspan="18" scope="colgroup">Tabella informativa d'indicizzazione per: bandi, esiti ed avvisi</th>
+					</tr>
+					
+					<tr> <!--  riga per le intestazioni -->
+				
+				
+		<th scope="col" abbr="Tipo">Tipo</th><th scope="col" abbr="Contratto">Contratto</th><th scope="col" abbr="DenominazioneEnte">Denominazione dell'Amministrazione Aggiudicatrice</th><th scope="col" abbr="TipoEnte">Tipo di Amministrazione</th><th scope="col" abbr="Provincia">Provincia Sede di Gara</th><th scope="col" abbr="Comune">Comune Sede di Gara</th><th scope="col" abbr="Indirizzo">Indirizzo Sede di Gara</th><th scope="col" abbr="SenzaImporto">Senza Importo</th><th scope="col" abbr="a base asta">Valore Importo a base asta</th><th scope="col" abbr="di aggiudicazione">Valore Importo di aggiudicazione</th><th scope="col" abbr="DtPubblicazione">Data Pubblicazione</th><th scope="col" abbr="DtScadenzaBando">Data Scadenza Bando</th><th scope="col" abbr="DtScadenzaPubblEsito">Data Scadenza Pubblicazione Esito</th><th scope="col" abbr="RequisitiQualificazione">Requisiti di Qualificazione</th><th scope="col" abbr="CPV">Codice CPV</th><th scope="col" abbr="SCP">Codice SCP</th><th scope="col" abbr="URL">URL di pubblicazione su www.serviziocontrattipubblici.it</th><th scope="col" abbr="CIG">Codice CIG</th></tr><tr><td scope="row">Bando</td><td scope="row">Forniture</td><td scope="row">Regione Toscana </td><td scope="row">REGIONI</td><td scope="row">Firenze</td><td scope="row">Firenze</td><td scope="row"></td><td scope="row">NO</td><td scope="row">1.452.000,00</td><td scope="row"></td><td scope="row">02/11/2026</td><td scope="row">19/11/2026</td><td scope="row"></td><td scope="row"></td><td scope="row">33690000-3 - Medicinali vari</td><td scope="row"></td><td scope="row"></td><td scope="row"></td>					</tr>
+					
+				</tbody>
+			</table> 
+		</div>
+		
+	</div>
+		
+		<input type="hidden" name="rss_quesiti" id="rss_quesiti" value="http://www.sanita.start.toscana.it/portale/rss_quesiti.asp?1=1&amp;Filter=ID_ORIGIN=613416+and+document%3D%27BANDO_GARA%27"></div>		</div>
+	</div>
+<p style="font-size: 12.16px; line-height: 15.808px;"> </p> 	</div>
+
+	
+							</div>
+					
+					<!-- End Content -->
+				</main>
+			</div>
+			
+				<!-- <div id="close"><a href="#" onClick="auf('right')"><span id="bild">Chiudi Menu</span></a></div> -->
+				
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<!--<hr />-->
+			
+			
+				<div class="div_site_name">
+					  				</div>
+			</p>
+		</div>
+		
+		<div id="main_bottom_div" class="bottom">
+			<div class="Footer_01">
+				<table class="FooterBottom">
+					<tbody><tr>
+						<th colspan="1" class="NOpx"></th>
+							<td class="FooterColLoghi">
+							<div class="footerTopContent">
+								<div class="FooterTopContentLeft">
+									<h3>
+									  <img src="/Portale/images/logo_w.png" alt="Logo">
+									</h3>
+									 <h3><p>Indirizzo Via di San Salvi, 12 - Palazzina 14 50135, Firenze  <br> Telefono – (+39) 051 6967017</p> 
+									 <p>PEC estar@postacert.toscana.it</p>
+									 <p>C.F. / P.IVA 06485540485 Cod. Univoco 0000400383</p>		
+									</h3>
+								</div>
+							</div>
+						</td>
+						</tr>
+					</tbody></table>				
+			</div>
+		</div>
+		
+	</footer>
+	
+</body>
+</html>

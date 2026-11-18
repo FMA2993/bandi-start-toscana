@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# gli allegati sono ~85 MB di binari che cambiano ogni giorno:
+# si rigenerano con `make update`, non stanno nel repo
+allegati/
+dist/
+*.log
