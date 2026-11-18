@@ -1,0 +1,10 @@
+# La dashboard in output/ è un artefatto generato (dati + CSS/JS inline),
+# non sorgente del progetto: non deve contare nelle statistiche linguaggi.
+output/report_bandi.html linguist-generated linguist-documentation
+
+# Le fixture sono snapshot HTML del portale, servono solo ai test offline.
+fixtures/*.html linguist-vendored linguist-documentation
+
+# Dati: non sono codice.
+output/*.json linguist-generated
+output/*.csv  linguist-generated
