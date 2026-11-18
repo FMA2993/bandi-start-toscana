@@ -30,6 +30,11 @@ update-data:
 list:
 	$(BANDI) --no-detail
 
+# prendi i dati aggiornati dalla CI e apri il report (quello che serve a papà)
+sync:
+	git pull --rebase --autostash
+	@open output/report_bandi.html 2>/dev/null || echo "→ apri output/report_bandi.html"
+
 report:
 	$(BANDI) --from-json output/bandi_aperti.json --html output/report_bandi.html --download allegati
 

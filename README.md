@@ -176,7 +176,8 @@ si rigenerano con `make update` e in CI vengono caricati come *artifact*.
 ```bash
 git clone <repo> && cd bandi-start-toscana
 make install && make test
-make update          # oppure: git pull   (i dati aggiornati dalla CI)
+make sync            # git pull + apre il report aggiornato (uso quotidiano)
+make update          # solo se servono anche i PDF in locale
 ```
 
 La GitHub Action `.github/workflows/update.yml` gira ogni mattina alle 07:15 CET
