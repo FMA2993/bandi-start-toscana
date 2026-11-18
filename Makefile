@@ -22,6 +22,11 @@ update:
 	$(BANDI) --json output/bandi_aperti.json --csv output/bandi_aperti.csv \
 		--html output/report_bandi.html --download allegati --timeout 90 --workers 5
 
+# solo dati (JSON/CSV/report), niente allegati: è quello che gira in CI
+update-data:
+	$(BANDI) --json output/bandi_aperti.json --csv output/bandi_aperti.csv \
+		--html output/report_bandi.html --timeout 90 --workers 5
+
 list:
 	$(BANDI) --no-detail
 

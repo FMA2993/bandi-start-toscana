@@ -1,16 +1,28 @@
 name: update
 
-# Aggiorna i dati ogni mattina e li committa: chi clona fa solo `git pull`.
-# Gli allegati (85 MB di binari) NON finiscono nel repo: vengono caricati
-# come artifact della run (scaricabili per 30 giorni).
+# Aggiorna i dati ogni mattina e li committa: chi ha clonato fa solo `git pull`.
+#
+# Qui girano SOLO i dati (JSON, CSV, report HTML): ~1 MB e pochi minuti.
+# Gli allegati (85 MB di binari, dal portale toscano a un runner in US = lento)
+# si scaricano a mano con `make update`, oppure lanciando questo workflow
+# manualmente con "scarica allegati" = true.
 
 on:
   schedule:
     - cron: "15 6 * * *" # 06:15 UTC = 07:15 CET
   workflow_dispatch:
+    inputs:
+      allegati:
+        description: "Scarica anche i PDF degli allegati (lento)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -30,8 +42,13 @@ jobs:
       - name: Test (offline, sulle fixture)
         run: .venv/bin/python -m pytest -q
 
-      - name: Scrape bandi + allegati
-        run: make update
+      - name: Scrape bandi
+        run: |
+          if [ "${{ inputs.allegati }}" = "true" ]; then
+            make update
+          else
+            make update-data
+          fi
 
       - name: Commit dei dati aggiornati
         run: |
@@ -45,7 +62,8 @@ jobs:
             git push
           fi
 
-      - name: Upload allegati
+      - name: Upload allegati (solo su richiesta)
+        if: ${{ inputs.allegati == true }}
         uses: actions/upload-artifact@v4
         with:
           name: allegati
