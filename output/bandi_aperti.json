@@ -42,8 +42,8 @@
   },
   {
     "id": "622349",
-    "descrizione": "PROCEDURA NEGOZIATA SANDIMMUN, FEMARA, TACFORIUS, RESPREEZA",
-    "stato": "Bando",
+    "descrizione": "Bando Rettificato - RETTIFICA ATTO DI GARA: DOMANDA DI PARTECIPAZIONE.",
+    "stato": "Rettificato",
     "tipo": "Bando",
     "ente_proponente": "Regione Toscana",
     "ente_appaltante": "Regione Toscana",
@@ -123,7 +123,7 @@
     "num_documenti": 0,
     "url_dettaglio": "https://www.sanita.start.toscana.it/portalegare/index.php/bandi?getdettaglio=yes&bando=622349&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-19T10:00:00&jk=",
     "campi": {
-      "Descrizione breve": "PROCEDURA NEGOZIATA SANDIMMUN, FEMARA, TACFORIUS, RESPREEZA",
+      "Descrizione breve": "BANDO RETTIFICATO - RETTIFICA ATTO DI GARA: DOMANDA DI PARTECIPAZIONE.",
       "Id Appalto ANAC": "cbd2355f-d4eb-4f5a-9cc9-69adc30e642e",
       "Informazioni Tecniche": "Numero Lotto CIG Descrizione Lotto Link 1 BDC6A48261 SANDIMMUN NEORAL*50CPS 25MG https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A48261 2 BDC6A49334 SANDIMMUN NEORAL*50CPS 50MG https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A49334 4 BDC6A4B4DA FEMARA*30CPR RIV 2,5MG https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4B4DA 3 BDC6A4A407 SANDIMMUN NEORAL*30CPS 100MG https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4A407 5 BDC6A4C5AD TACFORIUS*30CPS 0,5MG RP https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4C5AD 6 BDC6A4D680 TACFORIUS*30CPS 3MG RP https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4D680 8 BDC6A4F826 TACFORIUS*60CPS 1MG RP https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4F826 9 BDC6A508F9 RESPREEZA*EV 1FL 20ML+SOL 1G https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A508F9 7 BDC6A4E753 TACFORIUS*30CPS 5MG RP https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDC6A4E753",
       "Numero Lotto": "CIG Descrizione Lotto Link",
